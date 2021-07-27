@@ -1,9 +1,10 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Create from '../views/Create.vue';
-import Update from '../views/Update.vue';
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Create from "../views/Create.vue";
+import Update from "../views/Update.vue";
+import Skill from "../views/Skill.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -16,12 +17,17 @@ const routes = [
     name: "Update",
     component: Update,
   },
+  {
+    path: "/skill",
+    name: "Skill",
+    component: Skill,
+  },
 ];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

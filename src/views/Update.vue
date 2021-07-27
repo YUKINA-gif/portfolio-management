@@ -152,7 +152,7 @@ input {
 }
 h2 {
   font-size: 25px;
-  margin-bottom: 10px;
+  margin: 20px 0;
 }
 .button {
   width: 100px;

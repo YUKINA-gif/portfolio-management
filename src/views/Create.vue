@@ -43,9 +43,15 @@
         </td>
       </tr>
       <tr>
-        <th>制作日:</th>
+        <th>制作期間:</th>
         <td>
           <input type="text" v-model="created" />
+        </td>
+      </tr>
+       <tr>
+        <th>URL:</th>
+        <td>
+          <input type="text" v-model="url" />
         </td>
       </tr>
       <tr>
@@ -100,6 +106,7 @@ export default {
       name: "",
       detail: "",
       created:"",
+      url:"",
       github_front:"",
       github_api:"",
       difficulties: "",
@@ -140,6 +147,7 @@ export default {
       formData.append("name", this.name);
       formData.append("detail", this.detail);
       formData.append("created", this.created);
+      formData.append("url", this.url);
       formData.append("github_front", this.github_front);
       formData.append("github_api", this.github_api);
       formData.append("difficulties", this.difficulties);
@@ -165,71 +173,69 @@ export default {
 /* ====================
       店舗登録
 ==================== */
-  .store_setting {
-    width: 80%;
-    margin-left: 200px;
-  }
-  h2 {
-    font-size: 25px;
-  }
-  table {
-    width: 100%;
-    margin-top: 20px;
-    text-align: left;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
-  }
-  tr {
-    border: 1px solid #c2c2c2;
-  }
-  th {
-    width: 15%;
-    font-size: 18px;
-    padding: 5px;
-    background-color: rgb(212, 208, 201);
-  }
-  td {
-    width: 70%;
-    padding: 10px 5px;
-  }
-  td:nth-of-type(1) {
-    padding-bottom: 30px;
-  }
-  input,
-  textarea,
-  select {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-    font-size: 18px;
-  }
-  textarea {
-    display: block;
-  }
-  .image {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    padding-top: 60%;
-    margin: 10px 0;
-  }
-  .image img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .button {
-    margin: 20px 0 20px 50%;
-    width: 100px;
-    height: 35px;
-    font-weight: bold;
-    transform: translate(-50%);
-    background-color: rgb(108, 209, 115);
-  }
-  .loading {
-    margin-right: 20px;
-  }
+.store_setting {
+  width: 80%;
+  margin-left: 200px;
+}
+h2 {
+  font-size: 25px;
+  margin-top: 20px;
+}
+table {
+  width: 100%;
+  margin-top: 20px;
+  text-align: left;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+tr {
+  border: 1px solid #c2c2c2;
+}
+th {
+  width: 15%;
+  font-size: 18px;
+  padding: 5px;
+  background-color: rgb(212, 208, 201);
+}
+td {
+  width: 70%;
+  padding: 10px 5px;
+}
+input,
+textarea,
+select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 18px;
+}
+textarea {
+  display: block;
+}
+.image {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 60%;
+  margin: 10px 0;
+}
+.image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.button {
+  margin: 20px 0 20px 50%;
+  width: 100px;
+  height: 35px;
+  font-weight: bold;
+  transform: translate(-50%);
+  background-color: rgb(108, 209, 115);
+}
+.loading {
+  margin-right: 20px;
+}
 </style>

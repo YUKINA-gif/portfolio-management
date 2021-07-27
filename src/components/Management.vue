@@ -10,6 +10,9 @@
           <li @click="$router.push('/update')">
             情報変更・削除
           </li>
+          <li @click="$router.push('/skill')">
+            スキル登録
+          </li>
         </ul>
       </nav>
     </div>
