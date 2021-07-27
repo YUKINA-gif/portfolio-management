@@ -154,13 +154,11 @@ export default {
       formData.append("solutions", this.solutions);
       axios
         .post("https://yukinas-portfolio.herokuapp.com/api/portfolio", formData)
-        .then((response) => {
-          console.log(response);
+        .then(() => {
           alert("登録しました。")
           this.loading = true;
         })
-        .catch((error) => {
-          console.log(error);
+        .catch(() => {
           alert("登録できませんでした。お手数ですが、再度お試しください。");
           this.loading = true;
         });

@@ -22,7 +22,7 @@
       </tr>
     </table>
 
-    <button class="button" @click="createPtf">
+    <button class="button" @click="createSkill">
       <p v-if="loading">登録</p>
       <vue-loading
         type="barsCylon"
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-// import axios from "axios";
+import axios from "axios";
 import Management from "../components/Management.vue";
 import { VueLoading } from "vue-loading-template";
 export default {
@@ -50,7 +50,24 @@ export default {
     Management,
     VueLoading,
   },
-  methods: {},
+  methods: {
+    createSkill() {
+      this.loading = false;
+      axios
+        .post("https://yukinas-portfolio.herokuapp.com/api/skill", {
+          name: this.name,
+          skill: this.skill,
+        })
+        .then(() => {
+          alert("登録しました。");
+          this.loading = true;
+        })
+        .catch(() => {
+          alert("登録できませんでした。");
+          this.loading = true;
+        });
+    },
+  },
 };
 </script>
 

@@ -96,10 +96,7 @@ export default {
     },
     closeModal() {
       this.modal = false;
-      this.$router.go({
-        path: this.$router.currentRoute.path,
-        force: true,
-      });
+      this.getPtf();
     },
     // 店舗削除モーダルウィンドウ表示
     openModalDel(portfolio) {
@@ -108,10 +105,7 @@ export default {
     },
     closeModalDel() {
       this.modal_del = false;
-      this.$router.go({
-        path: this.$router.currentRoute.path,
-        force: true,
-      });
+      this.getPtf();
     },
   },
   created() {
