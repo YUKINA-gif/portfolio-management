@@ -51,6 +51,7 @@ export default {
     VueLoading,
   },
   methods: {
+    // スキル登録
     createSkill() {
       this.loading = false;
       axios
